@@ -13,8 +13,7 @@ Download the following datasets, and run our `data_process.py`, you can get the 
 |Athlete |                |       https://www.kaggle.com/heesoo37/120-years-of-olympic-history-athletes-and-results  |
 |Bank    | Including 4,521 data points and 16 features, we select 3 numerical features: age, balance, and duration.  |  https://archive.ics.uci.edu/ml/datasets/bank+marketing |
 |Census  |  Including 32,561 data points and 15 features, we select 5 numerical features: age, final-weight, education-num, capital-gain, hours-per-week.                |   https://archive.ics.uci.edu/ml/datasets/Adult|
-|Diabetes |  Including 101,766 data points and 50 features, we select 3 numerical features: admission_source_id, time_in_hospital, num_medications.
-    |https://archive.ics.uci.edu/ml/datasets/diabetes|
+|Diabetes |  Including 101,766 data points and 50 features, we select 3 numerical features: admission_source_id, time_in_hospital, num_medications.|https://archive.ics.uci.edu/ml/datasets/diabetes|
 |Recruitment|    |https://archive.ics.uci.edu/ml/datasets/Parkinsons+Telemonitoring/|
 |Spanish |         |https://archive.ics.uci.edu/ml/datasets/Parkinsons+Telemonitoring/|
 |Student |      | https://analyse.kmi.open.ac.uk/open_dataset|
