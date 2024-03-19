@@ -25,7 +25,6 @@ Download the following datasets, and run our `data_process.py`, you can get the 
 ## Start
 
 Run 'plot_toy_k=2' and 'plot_toy_k=3' directly, then you can get the visualization figures in our experiment.
-<img src = [文件名 . 图片格式](https://github.com/zsk66/TKM-master/files/14646908/k.2_visualization.pdf) / >
-[k=2_visualization.pdf](https://github.com/zsk66/TKM-master/files/14646908/k.2_visualization.pdf)
-[k=3_visualization.pdf](https://github.com/zsk66/TKM-master/files/14646910/k.3_visualization.pdf)
+<img width="880" alt="toy_example" src="https://github.com/zsk66/TKM-master/assets/74498140/c9e3f0b1-bac0-4c0e-a400-0cbd04ca62b5">
+
 
