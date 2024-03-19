@@ -104,19 +104,15 @@ for dataset_name in dataset_names:
 print('plot figure...')
 
 
-# 设置子图的参数
 fig, axs = plt.subplots(2, 4, figsize=(22, 9))
 
-# 设置线型和符号
 line_styles = ['-', '-', '-', '-', '-', '-', '-','-','-']
 line_symbols = ['o', 's', 'D', 'v', '*', '^', '+','x','>','<']
 fig_name = ['Athlete','Bank', 'Census', 'Diabetes', 'Recruitment','Spanish','Student','3D-spatial']
 dict_in_names = ['jkl_sse', 'mv_sse', 'fr_sse','sfr_sse', 'ifkm, t=0','ifkm, t=0.01', 'ifkm, t=0.05', 'ifkm, t=0.1','ifkm, t=0.2']
-# 生成横坐标
 x = np.arange(3, 11)
 
 
-# 循环生成每个子图
 for i, ax in enumerate(axs.flatten()):
     dataset_name = dataset_names[i]
     ax.plot(x, sse_dict[dataset_names[i]][dict_in_names[0]], line_styles[0], marker=line_symbols[0])
@@ -129,7 +125,6 @@ for i, ax in enumerate(axs.flatten()):
     ax.plot(x, sse_dict[dataset_names[i]][dict_in_names[7]], line_styles[7], marker=line_symbols[7])
     ax.plot(x, sse_dict[dataset_names[i]][dict_in_names[8]], line_styles[8], marker=line_symbols[8])
 
-    # 设置子图标题和横纵坐标标签
     ax.set_title(fig_name[i], fontsize=16, y=1)
     ax.set_xlabel('$k$', fontsize=16)
     ax.set_ylabel('SSE', fontsize=16)
@@ -137,7 +132,6 @@ for i, ax in enumerate(axs.flatten()):
     ax.set_xticklabels(['3', '4','5','6', '7','8','9','10'],fontsize=16)
 
     ax.ticklabel_format(style='sci', axis='y', scilimits=(0,0))
-    # 设置指数符号
     ax.yaxis.major.formatter._useMathText = True
     ax.yaxis.major.formatter._mathTextSciNotation = True
 labels = ['JKL', 'MV', 'FR', 'SFR', 'NF', 'TKM, $t=0.01$', 'TKM, $t=0.05$', 'TKM, $t=0.1$','TKM, $t=0.2$']

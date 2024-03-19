@@ -102,16 +102,14 @@ for dataset_name in dataset_names:
         variance_dict[dataset_name]['ifkm, t='+str(t)] = ifkm_variance_k
 
 print('plot figure...')
-x = np.array([1.4, 3.6, 5.8, 8.0])  # 横坐标
+x = np.array([1.4, 3.6, 5.8, 8.0])
 k = 4
 
 dataset_names = ['athlete','bank','census','diabetes','recruitment','spanish','student','3d']
 show_names = ['Athlete','Bank','Census','Diabetes','Recruitment','Spanish','Student','3D-spatial']
-# 创建画布和子图
 fig, axes = plt.subplots(nrows=2, ncols=4, figsize=(22, 9))
 method_names = ['jkl_variance', 'mv_variance', 'fr_variance', 'sfr_variance', 'ifkm, t=0', 'ifkm, t=0.01', 'ifkm, t=0.05', 'ifkm, t=0.1','ifkm, t=0.2']
 label_name = ['JKL', 'MV', 'FR', 'SFR', 'NF', 'TKM, $t=0.01$', 'TKM, $t=0.05$', 'TKM, $t=0.1$','TKM, $t=0.2$']
-# 绘制柱状图
 for i, ax in enumerate(axes.flat):
     for j in range(0,9):
         name = dataset_names[i]
@@ -128,39 +126,32 @@ for i, ax in enumerate(axes.flat):
 
 
 
-        hatch_styles = ['//', '..', 'xx', '\\\\', '--', '||', '++', 'o','/']  # 不同子图的底纹样式
+        hatch_styles = ['//', '..', 'xx', '\\\\', '--', '||', '++', 'o','/']
         bars = ax.bar(x + j * 0.2, y_group[j, :], width=0.2, hatch=hatch_styles[j],label=label_name[j])
-        # ax.axhline(y=0.8, color='k', linestyle='--')  # 添加黑色虚线
-        # ax.set_ylim([0, 1])  # 设置y轴范围
+
         show_name = show_names[i]
-        ax.set_title(show_name, fontsize=16, y=1)  # 设置子图标题
+        ax.set_title(show_name, fontsize=16, y=1)
         ax.set_xticklabels(['Cluster 1', 'Cluster 2', 'Cluster 3', 'Cluster 4'], va='baseline', fontsize=14)
         ax.set_ylabel('Variance', fontsize=16)
-        # ax.set_yticks([0,0.2,0.4,0.6,0.8,1,1.2,1.4])
         ax.tick_params(axis='x', which='both', pad=24)
         ax.set_yticklabels(['0','0.2','0.4','0.6','0.8','1','1.2','1.4'], fontsize=16)
         ax.yaxis.set_label_coords(-0.1, 0.5)
-        #
-        # 指定需要修改颜色的横坐标标签索引
-        color_indices = [0, 1]  # 假设要修改索引为1和3的横坐标标签颜色
 
-        # 修改指定索引的横坐标标签颜色
+        color_indices = [0, 1]
+
         for a, label in enumerate(ax.get_xticklabels()):
             if a in color_indices:
-                label.set_color('black')  # 设置标签颜色为蓝色
+                label.set_color('black')
 
 
     ax.set_xticks(x + 0.8)
 
-# 添加图例
 handles, labels = axes[0][0].get_legend_handles_labels()
 fig.legend(handles, labels, loc='upper center', ncol=9, fontsize=20, frameon=False)
 
-# 调整布局
 fig.tight_layout(rect=[0, 0.05, 1, 0.95])
 fig.subplots_adjust(hspace=0.3)
 plt.savefig("../results/variance.pdf")
 
-# 显示图形
 plt.show()
 

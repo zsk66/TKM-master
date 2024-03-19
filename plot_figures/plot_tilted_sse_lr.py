@@ -41,20 +41,16 @@ def smooth_curve(data, window_size=5):
 
 
 
-# 设置子图的参数
 fig, axs = plt.subplots(2, 4, figsize=(22, 9))
 
-# 设置线型和符号
 line_styles = ['-', '-', '-', '-', '-', '-', '-']
 line_symbols = ['o', 's', 'D', 'v', '*', '^', '+']
 fig_name = ['Athlete', 'Bank', 'Census', 'Diabetes', 'Recruitment', 'Spanish', 'Student', '3D-spatial']
 dict_in_names = ['TKM, lr=0.01', 'TKM, E=3', 'TKM, E=5', 'TKM, E=7']
 
-# 生成横坐标
 x = np.arange(0, 500)
 
 linewidth = 2
-# 循环生成每个子图
 for i, ax in enumerate(axs.flatten()):
     dataset_name = dataset_names[i]
     ax.plot(smooth_curve(ifkm_tilted_sse_t[dataset_names[i]][0]), line_styles[0], linewidth=linewidth)
@@ -63,12 +59,10 @@ for i, ax in enumerate(axs.flatten()):
     ax.plot(smooth_curve(ifkm_tilted_sse_t[dataset_names[i]][3]), line_styles[3], linewidth=linewidth)
     ax.plot(smooth_curve(ifkm_tilted_sse_t[dataset_names[i]][4]), line_styles[4], linewidth=linewidth)
 
-    # 设置子图标题和横纵坐标标签
     ax.set_title(fig_name[i], fontsize=18, y=1)
     ax.set_xlabel('Iterations', fontsize=16)
     ax.set_ylabel('Tilted SSE', fontsize=16)
     ax.ticklabel_format(style='sci', axis='y', scilimits=(0,0))
-    # 设置指数符号
     ax.yaxis.major.formatter._useMathText = True
     ax.yaxis.major.formatter._mathTextSciNotation = True
 labels = ['TKM, $\eta=0.01$', 'TKM, $\eta=0.02$', 'TKM, $\eta=0.03$', 'TKM, $\eta=0.04$', 'TKM, $\eta=0.05$']

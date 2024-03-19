@@ -1,8 +1,5 @@
 import json
-import os
-import matplotlib.pyplot as plt
-import numpy as np
-import matplotlib
+
 
 
 print('loading data...')
@@ -62,6 +59,4 @@ for dataset_name in dataset_names:
             time_mv_id.append(time_mv)
         time_jkl_num.append(sum(time_jkl_id) / len(time_jkl_id))
         time_mv_num.append(sum(time_mv_id) / len(time_mv_id))
-# when sample size > 10000, then the running time of FR is larger than 5 hours, we just consider jkl and mv as follows
 
-    print('the end')
