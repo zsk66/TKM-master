@@ -27,7 +27,8 @@ Download the following datasets, and run our `data_process.py`, you can get the 
 ### Visualization
 
 Run `plot_toy_k=2` and `plot_toy_k=3` directly, then you can get the visualization figures in our experiment.
-<img width="880" alt="toy_example" src="./visualization.pdf">
+<img width="400" alt="toy_example1" src="./k=2_visualization.png">
+<img width="400" alt="toy_example2" src="./k=3_visualization.png">
 
 
 ### Comparison among Various Methods and Parameters
