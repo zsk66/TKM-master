@@ -27,13 +27,13 @@ Download the following datasets, and run our `data_process.py`, you can get the 
 ### Visualization
 
 Run `plot_toy_k=2` and `plot_toy_k=3` directly, then you can get the visualization figures in our experiment.
-<img width="880" alt="toy_example" src="https://github.com/zsk66/TKM-master/assets/74498140/c9e3f0b1-bac0-4c0e-a400-0cbd04ca62b5">
+<img width="880" alt="toy_example" src="./visualization.pdf">
 
 
 ### Comparison among Various Methods and Parameters
 
 After downloading and processing the raw dataset, then directly run `main.py`, then you get the results of TKM.
 
-Run `Comparison_main` in individually-fair-k-clustering-main, which we forked from https://github.com/moonin12/individually-fair-k-clustering, then you get the results of our comparison methods.
+Run `Comparison_main` in individually-fair-k-clustering-main, which we forked from https://github.com/moonin12/individually-fair-k-clustering, and you get the results of our comparison methods.
 
-Then running the codes in plot_figures, you get all of the figures in our experiments.
+Then, running the codes in plot_figures, you get all of the figures in our experiments.
